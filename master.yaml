@@ -7,7 +7,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 50Gi
+      storage: database
 ---
 apiVersion: v1
 kind: Service
@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
       - name: citus
-        image: citusdata/citus:7.3.0
+        image: citusdata/citus:8.0.0
         ports:
         - containerPort: 5432
         env:
