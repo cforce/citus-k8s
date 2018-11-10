@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: citus-worker
-        image: citusdata/citus:7.3.0
+        image: citusdata/citus:8.0.0
         lifecycle:
           postStart:
             exec:
@@ -70,4 +70,4 @@ spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 50Gi
+          storage: database
